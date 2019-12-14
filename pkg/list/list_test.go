@@ -1,4 +1,4 @@
-package go_snippets
+package list
 
 import (
 	"reflect"
@@ -8,28 +8,28 @@ import (
 func TestRemove(t *testing.T) {
 	var act []int
 	var exp []int
-
+	
 	act = []int{0, 1, 2, 3, 4, 5}
 	act = remove(act, 1)
 	exp = []int{0, 2, 3, 4, 5}
 	if ! reflect.DeepEqual(act, exp) {
 		t.Fatalf("failed test %v", act)
 	}
-
+	
 	act = []int{0, 1, 2, 3, 4, 5}
 	act = remove(act, 0)
 	exp = []int{1, 2, 3, 4, 5}
 	if ! reflect.DeepEqual(act, exp) {
 		t.Fatalf("failed test %#v", act)
 	}
-
+	
 	act = []int{0, 1, 2, 3, 4, 5}
 	act = remove(act, 5)
 	exp = []int{0, 1, 2, 3, 4}
 	if ! reflect.DeepEqual(act, exp) {
 		t.Fatalf("failed test %#v", act)
 	}
-
+	
 	act = []int{0, 1, 2, 3, 4, 5}
 	act = remove(act, 0)
 	act = remove(act, 0)

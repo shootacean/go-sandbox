@@ -1,9 +1,6 @@
-// go-snippets is snippets with golang
-package go_snippets
+package list
 
-import (
-	"math"
-)
+import "math"
 
 // ある要素を削除したスライスを返す
 func remove(nums []int, i int) []int {
